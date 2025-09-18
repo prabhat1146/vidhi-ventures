@@ -4,7 +4,7 @@ import ImageSlider from "./ImageSlider";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="w-92 rounded-2xl shadow-lg bg-white overflow-hidden border">
+    <div className="w-94 h-full  rounded-2xl shadow-lg bg-white overflow-hidden border">
       {/* Image Slider */}
       <ImageSlider images={product.images} alt={product.name} />
 
