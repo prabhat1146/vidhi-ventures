@@ -319,7 +319,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen mt-12 bg-gray-100 p-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="min-h-screen mt-12 bg-gray-100 p-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
         {products.map((product, index) => (
           <ProductCard key={index} product={product} />
         ))}
