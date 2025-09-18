@@ -4,12 +4,12 @@ import ImageSlider from "./ImageSlider";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="w-94 h-full  rounded-2xl shadow-lg bg-white overflow-hidden border">
+    <div className="w-94 h-full rounded-2xl shadow-lg bg-white overflow-hidden border flex flex-col">
       {/* Image Slider */}
       <ImageSlider images={product.images} alt={product.name} />
 
       {/* Product Details */}
-      <div className="p-4">
+      <div className="p-4 flex flex-col flex-1">
         <h2 className="text-lg font-semibold">{product.name}</h2>
         <p className="text-sm text-gray-600 mb-2">{product.description}</p>
 
@@ -19,14 +19,25 @@ const ProductCard = ({ product }) => {
             <Star
               key={i}
               size={18}
-              className={i < product.rating ? "text-yellow-500 fill-yellow-500" : "text-gray-300"}
+              className={
+                i < product.rating
+                  ? "text-yellow-500 fill-yellow-500"
+                  : "text-gray-300"
+              }
             />
           ))}
-          <span className="ml-2 text-sm text-gray-500">({product.rating})</span>
+          <span className="ml-2 text-sm text-gray-500">
+            ({product.rating})
+          </span>
         </div>
 
         {/* Price */}
-        <p className="text-xl font-bold text-green-600 mb-4">₹{product.price}</p>
+        <p className="text-xl font-bold text-green-600 mb-4">
+          ₹{product.price}
+        </p>
+
+        {/* Spacer pushes button to bottom */}
+        <div className="flex-grow"></div>
 
         {/* Affiliate Button */}
         <a
