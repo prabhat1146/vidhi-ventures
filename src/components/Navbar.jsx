@@ -12,18 +12,18 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
-          <li><a href="#" className="hover:text-blue-600">Shop</a></li>
-          <li><a href="#" className="hover:text-blue-600">About</a></li>
-          <li><a href="#" className="hover:text-blue-600">Contact</a></li>
+          <li><a href="/" className="hover:text-blue-600">Home</a></li>
+          <li><a href="/legal/about" className="hover:text-blue-600">About</a></li>
+          <li><a href="/legal/contact-us" className="hover:text-blue-600">Contact</a></li>
         </ul>
 
         {/* Cart */}
         <div className="flex items-center space-x-4">
-          <button className="relative">
+          <button onClick={()=>{alert("Something went wrong.")}} className="relative">
             <ShoppingCart className="text-gray-700 hover:text-blue-600" size={24} />
             {/* Badge */}
             <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-1 rounded-full">
-              2
+              0
             </span>
           </button>
 
