@@ -26,15 +26,24 @@ const ProductCard = ({ product }) => {
               }
             />
           ))}
-          <span className="ml-2 text-sm text-gray-500">
-            ({product.rating})
-          </span>
+          <span className="ml-2 text-sm text-gray-500">({product.rating})</span>
         </div>
 
         {/* Price */}
-        <p className="text-xl font-bold text-green-600 mb-4">
-          ₹{product.price}
-        </p>
+        <>
+          <p className="text-xl font-bold text-red-600 mb-2 line-through">
+            {product?.price ? product?.price : "Not available"}
+          </p>
+          <p className="text-xl text-blue-600 mb-2">
+            {product?.discount ? product?.discount : "Not available"}
+          </p>
+
+          <p className="text-xl text-green-600 mb-2">
+            {product?.discounted_price
+              ? product?.discounted_price
+              : "Not available"}
+          </p>
+        </>
 
         {/* Spacer pushes button to bottom */}
         <div className="flex-grow"></div>
